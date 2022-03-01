@@ -17,13 +17,16 @@ while True:
 MINUS_lst = []
 PLUS_lst = []
 ZERO_lst = []
-for i in range(len(NUMB_lst)):
-    if NUMB_lst[i] < 0:
-        MINUS_lst.append(NUMB_lst[i])
-    elif NUMB_lst[i] == 0:
-        ZERO_lst.append(NUMB_lst[i])
+for i in NUMB_lst:
+    if i < 0:
+        MINUS_lst.append(i)
+    elif i == 0:
+        ZERO_lst.append(i)
     else:
-        PLUS_lst.append(NUMB_lst[i])
+        PLUS_lst.append(i)
 
 RESULT = MINUS_lst + ZERO_lst + PLUS_lst
-print('Вывод значений: ', RESULT)
+
+print('Вывод значений:')
+for element in RESULT:
+    print(element)
